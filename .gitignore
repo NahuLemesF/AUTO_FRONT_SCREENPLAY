@@ -1,5 +1,6 @@
 .gradle
 build/
+target/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -21,7 +22,10 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-
+### Binaries ###
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
 ### VS Code ###
 .vscode/
