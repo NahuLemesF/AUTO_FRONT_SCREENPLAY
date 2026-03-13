@@ -1,15 +1,15 @@
-package org.nahulemes.tasks;
+package org.nahulemes.hooks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class AbrirNavegador implements Task {
+public class OpenBrowser implements Task {
 
     private final String url;
 
-    public AbrirNavegador(String url) {
+    public OpenBrowser(String url) {
         this.url = url;
     }
 
@@ -18,7 +18,7 @@ public class AbrirNavegador implements Task {
         actor.attemptsTo(Open.url(url));
     }
 
-    public static AbrirNavegador abrirUrl(String url) {
-        return Tasks.instrumented(AbrirNavegador.class, url);
+    public static OpenBrowser withUrl(String url) {
+        return Tasks.instrumented(OpenBrowser.class, url);
     }
 }
