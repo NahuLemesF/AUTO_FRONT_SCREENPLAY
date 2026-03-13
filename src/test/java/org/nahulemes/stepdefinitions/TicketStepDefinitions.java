@@ -7,9 +7,9 @@ import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.nahulemes.hooks.OpenBrowser;
 import org.nahulemes.questions.IsTicketVisibleInList;
 import org.nahulemes.questions.IsTicketsPanelVisible;
-import org.nahulemes.tasks.AbrirNavegador;
 import org.nahulemes.tasks.FillTicketMandatoryFields;
 import org.nahulemes.tasks.LoginAsAdmin;
 import org.nahulemes.tasks.OpenTicketCreationForm;
@@ -19,7 +19,7 @@ import org.nahulemes.util.TestData;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class ConsultaStepDefinitions {
+public class TicketStepDefinitions {
 
     private String ticketTitle;
     private String ticketDescription;
@@ -27,7 +27,7 @@ public class ConsultaStepDefinitions {
     @Dado("que el administrador abre la aplicación")
     public void queElAdministradorAbreLaAplicacion() {
         OnStage.theActorCalled("Administrador").attemptsTo(
-                AbrirNavegador.abrirUrl(TestData.BASE_URL)
+                OpenBrowser.withUrl(TestData.BASE_URL)
         );
     }
 
