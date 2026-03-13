@@ -1,9 +1,14 @@
 .gradle
 build/
+target/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 .kotlin
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+target/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -17,24 +22,10 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+### Binaries ###
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
 
 ### VS Code ###
 .vscode/
